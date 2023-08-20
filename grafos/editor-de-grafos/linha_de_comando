@@ -1,0 +1,17 @@
+==================================================================
+(1) COMPILAR E EXECUTAR PROGRAMA C++ EM LINHA DE COMANDO
+==================================================================
+
+1. Compilar:
+   g++ fonte.cc -o objeto
+
+2. Executar:
+   ./objeto
+3. Executar alterando entrada padrao:
+   ./objeto < entrada.in
+
+4. Executar alterando saida padrao:
+   ./objeto > saida.in
+
+5. Executar alterando entrada/saida padrao:
+   ./objeto < entrada.in > saida.in
