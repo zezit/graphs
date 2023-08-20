@@ -275,7 +275,7 @@ public:
   boolean isCompleto() {
     for (int i = 0; i < numVertice; i++) {
       for (int j = 0; j < numVertice; j++) {
-        if (i!=j && !isAresta(i, j)) {
+        if (i != j && !isAresta(i, j)) {
           return false;
         }
       }
@@ -285,76 +285,20 @@ public:
   }
 };
 
-void testIsCompleto() {
-  Grafo *g = new Grafo;
-  g->lerGrafo();
-
-  bool completo = g->isCompleto();
-  g->imprimir();
-  cout << "Is completo: " << (completo ? "true" : "false") << endl;
-  delete g;
-}
-
-// void testIsNulo() {
-//   Grafo g;
-// 
-//   bool nulo = g.isNulo();
-//   cout << "Is nulo: " << (nulo ? "true" : "false") << endl;
-// }
-// 
-// void testIsRegular() {
-//   Grafo g;
-// 
-//   g.inserirAresta(0, 1, 1);
-//   g.inserirAresta(0, 2, 1);
-//   g.inserirAresta(1, 2, 1);
-// 
-//   bool regular = g.isRegular();
-//   cout << "Is regular: " << (regular ? "true" : "false") << endl;
-// }
-// 
-// void testIsSimples() {
-//   Grafo g;
-// 
-//   g.inserirAresta(0, 1, 1);
-//   g.inserirAresta(1, 2, 1);
-//   g.inserirAresta(2, 0, 1);
-// 
-//   bool simples = g.isSimples();
-//   cout << "Is simples: " << (simples ? "true" : "false") << endl;
-// }
-// 
-// void testGetGrau() {
-//   Grafo g;
-// 
-//   g.inserirAresta(0, 1, 1);
-//   g.inserirAresta(0, 2, 1);
-//   g.inserirAresta(1, 2, 1);
-// 
-//   int grau = g.getGrau(0);
-//   cout << "Grau of vertex 0: " << grau << endl;
-// }
-
 //=====================================================================
 // FUNCAO PRINCIPAL
 //=====================================================================
 int main(int argc, char **argv) {
-  //   Grafo *g = new Grafo;
-  //
-  //   while (g->lerGrafo() == true) {
-  //     g->imprimir();
-  //     g->imprimirVerticeAresta();
-  //     delete g;
-  //     g = new Grafo;
-  //   }
-  //
-  //   delete g;
+  Grafo *g = new Grafo;
 
-  testIsCompleto();
-  // testIsNulo();
-  // testIsRegular();
-  // testIsSimples();
-  // testGetGrau();
+  while (g->lerGrafo() == true) {
+    g->imprimir();
+    g->imprimirVerticeAresta();
+    delete g;
+    g = new Grafo;
+  }
+
+  delete g;
 
   return 0;
 } //--------------------------------------------------------------------
